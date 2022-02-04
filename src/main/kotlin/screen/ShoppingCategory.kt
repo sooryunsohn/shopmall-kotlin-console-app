@@ -1,5 +1,7 @@
 package screen
 
+import extensions.getNotEmptyString
+
 class ShoppingCategory {
     fun showCategories() {
         /*
@@ -16,14 +18,19 @@ class ShoppingCategory {
 
 
         // 카테고리 입력받기
-        var selectedCategory = readLine()
+        // readLine()의 반환타입이 String? 이므로, 확장함수 사용 가능.
+        var selectedCategory = readLine().getNotEmptyString()
 
 
+
+        /*
+        // 위에서 getNotEmpltyString() 으로 처리함. 필요없음
         // 사용자가 올바른 값을 입력할때까지  입력을 반복 처리
         while (selectedCategory.isNullOrBlank()) {
             println("값을 입력해 주세요.")
             selectedCategory = readLine()
         }
+        */
 
         if (selectedCategory == "#") {
             // (1) 장바구니로 이동

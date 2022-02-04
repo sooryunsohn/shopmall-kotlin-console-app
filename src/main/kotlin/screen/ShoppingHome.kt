@@ -1,5 +1,7 @@
 package screen
 
+import extensions.getNotEmptyString
+
 class ShoppingHome {
     /*
         쇼핑몰 프로그램의 시작 위치
@@ -19,7 +21,7 @@ class ShoppingHome {
 
 
         // 2) 사용자 이름 입력받기
-        val name = readLine()       // 화면에서 사용자 입력받기
+        val name = readLine().getNotEmptyString()       // 화면에서 사용자 입력받기
 
 
         // 3) 입력받은 사용자 이름 출력, """ 3개는 이 안에 있는 내용 그대로 표시하라는 뜻
